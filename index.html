@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Co</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header">
+            <div class="logo"><h1>File <span>Co</span></h1></div>
+        </div>
+    </header>
+
+    <main>
+        <div id="frame1" class="container homeContainer">
+            <div class="containerTxt">
+                <h1>Your Ultimate Conversion Solution!</h1>
+                <p>"Unlock the Power to Transform Word Documents into Stunning PDFs 
+                    and Seamlessly Reverse the Process with PDF to Word Conversion!"
+                </p>
+            </div>
+            
+            <div class="uploadSection">
+
+                <div class="illustration flex">
+                    <div class="illustrationImg">
+                        <img src="upload 1.png" alt="">
+                    </div> 
+
+                                      
+                    <div class="form">
+                        <form id="form" action="" method="post">
+                            <input type="file" id="file" name="userFile" accept=".pdf, .docx, .doc" onchange="NameHandler(event)">
+                            <input class="dummyBtn" type="submit" value="Choose file">
+                            <p id="docInfo">No chosen file</p>
+                            <button id="btn" class="btn blueBtn">Upload File</button>
+                        </form>
+                    </div>
+                    
+                </div>
+
+            </div>
+        
+        </div>
+
+        <div id="frame2" class="container hide statusContainer">
+            <div class="statusBar"></div>
+            <h3>Processing</h3>
+        </div>
+
+        <div id="frame3" class="container flex hide processedContainer">
+            <div class="containerContent">
+                <h2>Your file has been processed and is ready for download!</h2>
+                <a class="clrBlue" href="index.html">Convert another file</a>
+                <a id="downloadBtn" class="specialBtn btn blueBtn">Download</a>
+                <a id="ConvertBtn" href="" class="specialBtn btn hide blueBtn">Convert another file</a>
+                <!-- <a class="specialBtn btn blueBtn" href="#" id="downloadLink" download>Download</a> -->
+                <h4>Thanks for using this service</h4>
+            </div>
+
+            <div class="bckHome">
+                <a href="" class="clrRed">Back Home</a>
+            </div>
+            
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

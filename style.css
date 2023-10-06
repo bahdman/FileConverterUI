@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=sniglet&family=Inter&family=Lato:wght@900&display=swap');
+
+:root{
+    --clrBlue : #000AFF;
+    --clrBlack : #000000;
+    --clrWhite : #ffffff;
+    --clrRed: red;
+}
+
+
+/* General Styling */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+}
+
+span, .containerTxt h1{
+    color: var(--clrBlue);
+}
+
+h1, h2, h3{
+    font-family: 'Lato', sans-serif;
+}
+p, a, h4{
+    font-family: 'Inter', sans-serif;
+}
+p{
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.btn{
+    font-family: 'Inter', sans-serif;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.clrBlue{
+    color: var(--clrBlue) !important;
+}
+.clrBlk{
+    color: var(--clrBlack);
+}
+.clrRed{
+    color: var(--clrRed);
+}
+.clrRed:hover{
+    color: black;
+}
+
+.blueBtn{
+    background: var(--clrBlue);
+}
+.blackBtn{
+    background: var(--clrBlack);
+}
+
+.specialBtn{
+    padding: 10px 20px;
+}
+
+.hide{
+    display: none !important;
+}
+
+/* Header */
+.header{
+    padding: 40px 0px;
+    margin-left: 100px;
+}
+
+
+/* Body Content ==> Home Page*/
+
+.homeContainer{
+    margin: 50px auto;
+}
+
+.container{
+    width: 70%;
+    height: auto;
+    text-align: center;
+}
+
+.containerTxt  h1{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.containerTxt p{
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.uploadSection{
+    margin: auto;
+    margin-top: 20px;
+    width: 400px;
+    height: 290px;  
+    border: 2px dotted ;
+    border-spacing: 40px;
+}
+
+.illustration{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+.illustrationImg{
+    width: 150px;
+    height: 150px;
+}
+.form{
+    position: relative;
+    /* justify-content: center; */
+}
+
+input{
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+input[type=file]
+{
+    position: absolute;
+    opacity: 0;
+    width: 180px;
+    height: 200px;
+    top: -150px;
+    left: 10px;
+    outline: 1px solid black;
+}
+
+#docInfo{
+    margin-top: 10px;
+}
+
+.dummyBtn{
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+form .btn{
+    margin-top: 10px;
+}
+
+
+
+/* Status Processing Page */
+.statusContainer{
+    margin: 150px auto;
+    width: 70%;
+    /* background: cyan; */
+}
+
+.statusBar{
+    width: 500px;
+    height: 20px;
+    border: 2px solid;
+    border-radius: 30px;
+    margin: 50px auto;
+    background: var(--clrBlue);
+}
+
+.statusContainer .blackBtn{
+    margin-top: 90px;
+}
+
+
+/* Processed Page */
+
+.processedContainer{
+    margin: 150px auto;
+    width: 70%;
+    height: 50vh;
+    position: relative;
+    flex-direction: column;
+    gap: 100px;
+}
+
+
+
+.containerContent .btn{
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.containerContent a{
+    width: 160px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.bckHome{
+   text-align: left;
+   bottom: 0;
+}
+
+
+.containerContent a, 
+.containerContent h4{
+    display: block;
+    margin-top: 30px;
+}
+
+#ConvertBtn, #errorBtn{
+    font-size: 12px;
+}
+
+/* Error Page */
+
+.noFace{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.errorCont{
+    margin: 20px auto;
+}
+
+.errorTxt{
+    margin-top: 30px;
+}
+
+.errorTxt h1{
+    font-size: 100px;
+}
+.errorTxt h3{
+    font-size: 30px;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width : 924px) {
+
+    /* General and FRAME ONE */
+
+    .header{
+        margin-left: 50px;
+    }
+
+    .containerTxt h1, .header h1, .errorTxt h1{
+        font-size: 30px;
+    }
+    
+    .containerTxt p{
+        width: 100%;
+    }
+
+    .uploadSection{
+        width: 250px;
+    }
+
+    .illustrationImg{
+        width: 150px;
+        height: 150px;
+    }
+    input[type=file]{
+        width: 150px;
+        left: 0;
+    }
+
+    .btn{
+        width: 150px;
+        height: 30px;
+    }
+
+    .dummyBtn{
+        width: 80px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    #docInfo{
+        font-size: 12.5px;
+    }
+
+    /* FRAME TWO */
+
+    .statusBar{
+        width: 400px;
+        height: 15px;
+    }
+
+    /* FRAME THREE */
+    h2{
+        font-size: 20px;
+    }
+
+    .containerContent .clrBlue{
+        font-size: 14px;
+    }
+
+    /* Error Page */
+
+
+    #downloadBtn
+    {
+        width: 120px;
+        padding: 8px 15px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .clrRed{
+        font-size: 13px;
+    }
+
+    .noFace{
+        width: 150px;
+        height: 150px;
+    }
+    
+}
+
+@media screen and (max-width : 700px) {
+
+    /* General and FRAME ONE */
+
+    .containerTxt h1, .header h1, .errorTxt h1{
+        font-size: 25px;
+    }
+
+    .containerTxt p{
+        font-size: 13px;
+    }
+
+    /* FRAME TWO */
+
+    .statusBar{
+        width: 300px;
+        height: 13px;
+    }
+
+    h3, .errorTxt h3{
+        font-size: 17px;
+    }
+
+    /* FRAME THREE */
+    h2{
+        font-size: 18px;
+    }
+    .containerContent .clrBlue{
+        font-size: 13px;
+    }
+
+    .noFace{
+        width: 130px;
+        height: 130px;
+    }
+    
+}
+
+@media screen and (max-width: 579px) {
+
+    /* General and FRAME ONE */
+    
+    .container{
+        width: 90%;
+    }
+
+    /* FRAME TWO */
+
+    .statusBar{
+        width: 250px;
+        height: 11px;
+    }
+
+    h3, .errorTxt h3{
+        font-size: 17px;
+    }
+
+    /* FRAME THREE */
+    h2{
+        font-size: 16px;
+    }
+    .noFace{
+        width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (max-width: 460px) {
+
+    /* General and FRAME ONE */
+
+    /* .container{
+        margin-top: 150px;
+    } */
+    
+    .containerTxt h1{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .errorTxt h1{
+        font-size: 20px;
+    }
+
+    .containerTxt p{
+        font-size: 12px;
+    }
+
+    .uploadSection{
+        width: 200px;
+        height: 220px;
+        margin-top: 50px;
+    }
+
+    .illustrationImg{
+        width: 110px;
+        height: 110px;
+    }
+    
+    input[type=file]{
+        width: 110px;
+        height: 160px;
+        left: 5px; 
+        top: -110px;      
+    }
+
+    .btn{
+        width: 120px;
+        height: 24px;
+        font-size: 11px !important;
+    }
+
+    .dummyBtn{
+        width: 70px;
+        height: 20px;
+        font-size: 11px;
+    }
+
+    #docInfo{
+        font-size: 10.5px;
+    }
+
+    /* FRAME TWO */
+
+    .statusBar{
+        width: 200px;
+        height: 9px;
+    }
+
+    h3, .errorTxt h3{
+        font-size: 14px;
+    }
+}
+
+
